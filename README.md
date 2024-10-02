@@ -1,4 +1,4 @@
-MindFlow 🧠💡
+#MindFlow 🧠💡#
 Simplifique suas tarefas. Aumente sua produtividade.
 
 Bem-vindo ao MindFlow, o sistema de gerenciamento de tarefas inteligente que te ajuda a manter o foco no que realmente importa. Com uma interface minimalista e intuitiva, o MindFlow foi projetado para otimizar sua rotina, permitindo organizar, priorizar e acompanhar suas tarefas de forma rápida e eficaz.
