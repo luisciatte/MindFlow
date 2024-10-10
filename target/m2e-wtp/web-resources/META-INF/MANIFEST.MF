@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: luis_e_abreu
-=======
-Built-By: fabio_wozniak
->>>>>>> origin/development
 Build-Jdk: 17.0.5
 Created-By: Maven Integration for Eclipse
 
