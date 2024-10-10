@@ -1,15 +1,44 @@
 package br.senai.mindflow.modelo.entidade.administrador;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import br.senai.mindflow.modelo.entidade.usuario.Usuario;
+
+@Entity
+@Table(name = "administrador")
 public class Administrador {
-	private String nome;
-	private String email;
-	private String senha;
-	private List<Usuario> usuarios;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "nome", nullable = false)
+    private String nome;
+
+    @Column(name = "email", nullable = false, unique = true)
+    private String email;
+
+    @Column(name = "senha", nullable = false)
+    private String senha;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "administrador_id")
+    private List<Usuario> usuarios;
 
 	public Administrador() {}
 
 	public Administrador(String nome, String email, String senha, List<Usuario> usuarios) {
-		super();
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;

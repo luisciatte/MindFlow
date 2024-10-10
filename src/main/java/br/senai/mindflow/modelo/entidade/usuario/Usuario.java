@@ -1,50 +1,80 @@
 package br.senai.mindflow.modelo.entidade.usuario;
 
-import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import br.senai.mindflow.modelo.entidade.tarefa.Tarefa;
+
+@Entity
+@Table(name = "usuario")
 public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "nome", nullable = false)
     private String nome;
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
+
+    @Column(name = "senha", nullable = false)
     private String senha;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usuario_id")
     private List<Tarefa> tarefas;
 
-    // Construtor
-    public Usuario(String nome, String email, String senha) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.tarefas = new ArrayList<>();
-    }
+	public Usuario() {}
+	
+	public Usuario(String nome, String email, String senha, List<Tarefa> tarefas) {
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+		this.tarefas = tarefas;
+	}
 
-    // Métodos
-    public void cadastrarTarefa(Tarefa tarefa) {
-        tarefas.add(tarefa);
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public void excluirTarefa(Tarefa tarefa) {
-        tarefas.remove(tarefa);
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public List<Tarefa> consultarTarefas() {
-        return tarefas;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void editarTarefa(Tarefa tarefa, String novoTitulo, String novaDescricao) {
-        tarefa.editarTarefa(novoTitulo, novaDescricao);
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public Tarefa buscarTarefaPorTitulo(String titulo) {
-        for (Tarefa tarefa : tarefas) {
-            if (tarefa.getTitulo().equals(titulo)) {
-                return tarefa;
-            }
-        }
-        return null;
-    }
+	public String getSenha() {
+		return senha;
+	}
 
-    // Getters e Setters
-    public String getNome() { return nome; }
-    public String getEmail() { return email; }
-    public String getSenha() { return senha; }
-    public List<Tarefa> getTarefas() { return tarefas; }
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public List<Tarefa> getTarefas() {
+		return tarefas;
+	}
+
+	public void setTarefas(List<Tarefa> tarefas) {
+		this.tarefas = tarefas;
+	}
+
 }
