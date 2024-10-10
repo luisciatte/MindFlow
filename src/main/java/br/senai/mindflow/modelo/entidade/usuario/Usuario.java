@@ -17,6 +17,8 @@ import br.senai.mindflow.modelo.entidade.tarefa.Tarefa;
 @Entity
 @Table(name = "usuario")
 public class Usuario {
+	
+	private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

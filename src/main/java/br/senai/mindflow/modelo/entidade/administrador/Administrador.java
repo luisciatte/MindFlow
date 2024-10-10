@@ -18,6 +18,9 @@ import br.senai.mindflow.modelo.entidade.usuario.Usuario;
 @Table(name = "administrador")
 public class Administrador {
 
+	private static final long serialVersionUID = 1L;
+
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
