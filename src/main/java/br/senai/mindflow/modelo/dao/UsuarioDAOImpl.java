@@ -118,7 +118,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 			CriteriaBuilder construtor = sessao.getCriteriaBuilder();
 
-		CriteriaQuery<Usuario> criteria = construtor.createQuery(Usuario.class);
+			CriteriaQuery<Usuario> criteria = construtor.createQuery(Usuario.class);
 			Root<Usuario> raizUsuario = criteria.from(Usuario.class);
 
 			criteria.select(raizUsuario);
