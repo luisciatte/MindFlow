@@ -1,4 +1,4 @@
-package br.senai.mindflow.modelo.dao;
+package br.senai.mindflow.modelo.dao.usuario;
 
 import java.util.List;
 

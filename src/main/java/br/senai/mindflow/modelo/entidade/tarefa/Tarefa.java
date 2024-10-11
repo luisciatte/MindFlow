@@ -1,13 +1,18 @@
 package br.senai.mindflow.modelo.entidade.tarefa;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import br.senai.mindflow.modelo.enumeracao.statusTarefa.StatusTarefa;
 
 @Entity
 @Table(name = "tarefa")
@@ -19,6 +24,9 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    
+    @Enumerated(EnumType.STRING)
+    private StatusTarefa status;
 
     @Column(name = "titulo", nullable = false)
     private String titulo;
@@ -31,12 +39,12 @@ public class Tarefa {
 
     @Column(name = "data_conclusao")
     private Date dataConclusao;
+    
+    @Column(name = "prazo", nullable = false)
+    private LocalDate prazo;
 
-    @Column(name = "situacao", nullable = false)
-    private String situacao;
 
-    @Column(name = "prioridade")
-    private String prioridade;
+    
 
 	public Tarefa() {}
 
