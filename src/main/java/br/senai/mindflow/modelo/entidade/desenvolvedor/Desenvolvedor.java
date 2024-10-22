@@ -20,16 +20,17 @@ public class Desenvolvedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "nome_desenvolvedor", nullable = false)
     private String nome;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "email",nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "matricula",nullable = false, unique = true)
     private String matricula;
 
     @OneToMany(mappedBy = "desenvolvedor", cascade = CascadeType.ALL)
+    @Column(name = "tarefas_desenvolvedor")
     private List<Tarefa> tarefas;
 
     public Desenvolvedor() {

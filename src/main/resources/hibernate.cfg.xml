@@ -4,13 +4,15 @@
     <session-factory>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mindFlow?serverTimezone=America/Sao_Paulo</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mindflow?createDatabaseIfNotExist=true&amp;serverTimezone=America/Sao_Paulo</property>
 		<property name="hbm2ddl.auto">update</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
-		<mapping class="br.senac.hemolink.modelo.entidade.aquisicaoConquista.AquisicaoConquista" />
+		<mapping class="br.senai.mindflow.modelo.entidade.desenvolvedor.Desenvolvedor" />
+		<mapping class="br.senai.mindflow.modelo.entidade.tarefa.Tarefa" />
+		<mapping class="br.senai.mindflow.modelo.entidade.usuario.Usuario" />
+		
 	</session-factory>
 </hibernate-configuration>

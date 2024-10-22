@@ -9,7 +9,7 @@ import javax.persistence.criteria.Root;
 import org.hibernate.Session;
 
 import br.senai.mindflow.modelo.entidade.usuario.Usuario;
-import br.senai.mindflow.modelo.factory.conexao.ConexaoFactory;
+import br.senai.mindflow.modelo.factory.ConexaoFactory;
 
 public class UsuarioDAOImpl implements UsuarioDAO {
 
