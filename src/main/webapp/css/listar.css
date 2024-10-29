@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7; /* Fundo cinza claro */
+    color: #333; /* Texto escuro */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333; /* Linha escura embaixo do cabeçalho */
+    padding-bottom: 15px;
+}
+
+h1 {
+    color: #333; /* Preto para o título */
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.botao-adicionar {
+    padding: 12px 20px;
+    background-color: #333; /* Preto */
+    color: #ffffff;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.botao-adicionar:hover {
+    background-color: #444; /* Cinza escuro para o hover */
+    transform: translateY(-2px);
+}
+
+main {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc; /* Borda sutil entre células */
+}
+
+th {
+    background-color: #333; /* Preto para o cabeçalho */
+    color: #ffffff; /* Texto branco */
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fundo claro nas linhas pares */
+}
+
+tr:hover {
+    background-color: #e0e0e0; /* Cinza claro ao passar o mouse */
+    transition: background-color 0.3s;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.botao-retornar {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #555; /* Cinza escuro para o botão de retorno */
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao-retornar:hover {
+    background-color: #666; /* Cinza mais claro para o hover */
+    transform: translateY(-2px);
+}

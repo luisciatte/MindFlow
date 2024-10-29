@@ -23,8 +23,8 @@
                 </ul>
             </nav>
             <div class="botoes">
-                <a href="#" class="botao-primario">Entrar</a>
-                <a href="#" class="botao-secundario">Cadastre-se</a>
+                <a href="login.jsp" class="botao-primario">Entrar</a>
+                <a href="cadastro-usuario.jsp" class="botao-secundario">Cadastre-se</a>
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
