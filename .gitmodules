@@ -1,0 +1,3 @@
+[submodule "MindFlow"]
+	path = MindFlow
+	url = https://github.com/luisciatte/MindFlow.git
