@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: modelo.dao.desenvolvedor.DesenvolvedorDAOTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 2, Skipped: 0, Time elapsed: 1.147 s <<< FAILURE! - in modelo.dao.desenvolvedor.DesenvolvedorDAOTest
+testReadDesenvolvedor  Time elapsed: 1.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: O desenvolvedor com ID 1 deveria existir. ==> expected: not <null>
+	at modelo.dao.desenvolvedor.DesenvolvedorDAOTest.testReadDesenvolvedor(DesenvolvedorDAOTest.java:53)
+
+testCreateDesenvolvedor  Time elapsed: 0.039 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.hibernate.Session.getTransaction()" because "sessao" is null
+	at modelo.dao.desenvolvedor.DesenvolvedorDAOTest.testCreateDesenvolvedor(DesenvolvedorDAOTest.java:43)
+
+testDeleteDesenvolvedor  Time elapsed: 0.062 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.hibernate.Session.getTransaction()" because "sessao" is null
+	at modelo.dao.desenvolvedor.DesenvolvedorDAOTest.testDeleteDesenvolvedor(DesenvolvedorDAOTest.java:74)
+
+testUpdateDesenvolvedor  Time elapsed: 0.027 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: O desenvolvedor com ID 1 deveria existir. ==> expected: not <null>
+	at modelo.dao.desenvolvedor.DesenvolvedorDAOTest.testUpdateDesenvolvedor(DesenvolvedorDAOTest.java:60)
+
